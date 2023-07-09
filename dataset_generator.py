@@ -38,7 +38,7 @@ for sentiment in sentiments:
 
 	response = get_completion(prompt_generate_single)
 
-	file = open(f'./data/{sentiment}.json', 'w')
+	file = open(f'./data/{sentiment}.json', mode='w', encoding='utf-8')
 	file.write('{\n\t"' + sentiment +'": [\n')
 	for choice in response:
 		file.write(f'\t\t{choice},\n')
